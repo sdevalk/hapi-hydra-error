@@ -120,9 +120,9 @@ describe('Hapi Hydra Error', () => {
             expect(response.headers['content-type']).to.equal('application/json; charset=utf-8');
             expect(response.headers.link).to.equal('</error.jsonld>; rel="http://www.w3.org/ns/json-ld#context"; type="application/ld+json"');
             expect(response.result).to.equal({
-                type: 'hydra:Error',
-                'hydra:title': 'Bad Request',
-                'hydra:description': 'Bad Request'
+                type: 'Error',
+                title: 'Bad Request',
+                description: 'Bad Request'
             });
         });
 
@@ -145,9 +145,9 @@ describe('Hapi Hydra Error', () => {
             expect(response.headers['content-type']).to.equal('application/json; charset=utf-8');
             expect(response.headers.link).to.equal('</error.jsonld>; rel="http://www.w3.org/ns/json-ld#context"; type="application/ld+json"');
             expect(response.result).to.equal({
-                type: 'hydra:Error',
-                'hydra:title': 'Bad Request',
-                'hydra:description': 'Some message'
+                type: 'Error',
+                title: 'Bad Request',
+                description: 'Some message'
             });
         });
 
@@ -171,9 +171,9 @@ describe('Hapi Hydra Error', () => {
             expect(response.headers.link).to.equal('</error.jsonld>; rel="http://www.w3.org/ns/json-ld#context"; type="application/ld+json"');
             expect(response.headers['www-authenticate']).to.equal('Basic error="Bad"');
             expect(response.result).to.equal({
-                type: 'hydra:Error',
-                'hydra:title': 'Unauthorized',
-                'hydra:description': 'Bad'
+                type: 'Error',
+                title: 'Unauthorized',
+                description: 'Bad'
             });
         });
     });
