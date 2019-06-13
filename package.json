@@ -1,7 +1,8 @@
+
 {
   "name": "hapi-hydra-error",
   "description": "hapi-hydra-error",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "engines": {
     "node": ">=8.9.0"
   },
@@ -11,16 +12,16 @@
   "repository": "git://github.com/sdevalk/hapi-hydra-error.git",
   "scripts": {
     "lint": "lab -d -f -L",
-    "test": "lab -L -a code -t 100",
-    "test-cov-html": "lab -a code -r html -o coverage.html"
+    "test": "lab -L -a @hapi/code -t 100",
+    "test-cov-html": "lab -a @hapi/code -r html -o coverage.html"
   },
   "dependencies": {
-    "joi": "14.3.0"
+    "@hapi/joi": "15.0.3"
   },
   "devDependencies": {
-    "boom": "7.3.0",
-    "code": "5.2.4",
-    "hapi": "17.8.1",
-    "lab": "18.0.0"
+    "@hapi/boom": "7.4.2",
+    "@hapi/code": "5.3.1",
+    "@hapi/hapi": "18.3.1",
+    "@hapi/lab": "18.1.2"
   }
 }
